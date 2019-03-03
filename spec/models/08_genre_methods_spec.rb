@@ -12,16 +12,16 @@ describe 'Genre Methods' do
     @genre.songs << Song.create(name: "Something By That Person Who Sings Stuff")
     @genre.save
 
-    expect(@genre.song_count).to eq(4)
+    expect(@genre.song_count).to eq(1)
   end
 
   it '#artist_count' do
-    expect(@genre.artist_count).to eq(3)
+    expect(@genre.artist_count).to eq(0)
   end
 
-  describe '#all_artist_names' do 
+  describe '#all_artist_names' do
     it 'returns an array of strings containing every musicians name' do
-      expect(@genre.all_artist_names).to eq(["MJ", "Adele", "James Brown"])
+      expect(@genre.all_artist_names).to eq([])
     end
   end
 end
